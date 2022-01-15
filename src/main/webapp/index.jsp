@@ -26,7 +26,7 @@
 
 
 
-                            
+
 
 Criar uma página JSP que contenha a utilização de Declaration, Scriptlet e Expression.
 
@@ -45,5 +45,21 @@ Criar uma página JSP que contenha a utilização de Declaration, Scriptlet e Ex
 %>
 
 <h3> A soma de todos os numeros ímpares de 3 até 17 é: <%=soma%></h3>
+
+
+<h3>Informo se o segundo atual é ímpar ou par</h3>
+<%@ page import="java.util.Calendar"%>
+<%@ page import="java.util.Date" %>
+
+<% Calendar cal = Calendar.getInstance();	
+	Date dt = new Date();
+	int segundos = cal.get(Calendar.SECOND); 
+	out.println("O SEGUNDO É: " + segundos);
+	if(segundos % 2 == 1){
+		out.println("\nO SEGUNDO É ÍMPAR");
+	} else {
+		out.println("\nO SEGUNDO É PAR");
+	}
+%>
 </body>
 </html>
