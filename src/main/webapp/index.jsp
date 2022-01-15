@@ -23,5 +23,27 @@
 							}else{ 
 							out.println(new java.util.Date());
 							}%> </h1> 
+
+
+
+                            
+
+Criar uma página JSP que contenha a utilização de Declaration, Scriptlet e Expression.
+
+<h3>Vou informar a soma dos numeros impares de 3 a 17</h3>
+
+<%! int inicio = 3; %>
+<%! int fim = 17; %>
+<%! int soma = 0; %>
+<% for(int i = inicio; i <= fim; i++){
+    if(i % 2 == 1){
+        soma += i;
+        out.println(soma);
+    }	
+} 
+
+%>
+
+<h3> A soma de todos os numeros ímpares de 3 até 17 é: <%=soma%></h3>
 </body>
 </html>
